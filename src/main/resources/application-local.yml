@@ -1,0 +1,23 @@
+
+server:
+  servlet:
+    context-path: /chhotaUrl
+  port: 8080
+
+spring:
+  application:
+    name: Chhota-URL
+  datasource:
+    password: root
+    username: postgres
+    driverClassName: org.postgresql.Driver
+    url: jdbc:postgresql://localhost:5432/chhotaUrlDB?currentSchema=chhota-url
+  flyway:
+    enabled: true
+    locations: classpath:db/migration
+    baseline-on-migrate: false
+  jpa:
+    generate-ddl: true
+    properties:
+      ddl-auto: none
+      hibernate-dialect: org.hibernate.dialect.PostgreSQLDialect
