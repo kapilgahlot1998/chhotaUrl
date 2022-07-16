@@ -14,8 +14,8 @@ import java.util.List;
 public class UserProfileEntity {
 
     @Id
-    @SequenceGenerator(sequenceName = "userId_seq", name = "user_sequence", allocationSize = 1)
-    @GeneratedValue(generator = "user_sequence")
+    @GeneratedValue(strategy = GenerationType.IDENTITY)
+    @Column(columnDefinition = "serial")
     private Long userId;
     private String userEmail;
     @OneToMany(mappedBy = "userId")
