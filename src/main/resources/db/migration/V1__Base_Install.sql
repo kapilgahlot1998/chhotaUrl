@@ -1,6 +1,6 @@
 
 CREATE TABLE user_profile (
-	user_id bigint NOT NULL,
+	user_id SERIAL NOT NULL,
 	user_email varchar(100) NOT NULL
 );
 
@@ -9,9 +9,6 @@ ADD CONSTRAINT useremail_uk UNIQUE (user_email);
 
 ALTER TABLE user_profile
 ADD CONSTRAINT userprofile_pk PRIMARY KEY (user_id);
-
-CREATE SEQUENCE userId_seq AS BIGINT INCREMENT BY 1 START 1 OWNED BY user_profile.user_id;
-
 
 CREATE TABLE chhota_url_details(
     hash_code varchar(7) NOT NULL,
