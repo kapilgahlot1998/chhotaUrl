@@ -1,10 +1,8 @@
 package com.kapil.chhotaURL.Controller;
 
 import com.kapil.chhotaURL.DTO.UserProfileDTO;
-import com.kapil.chhotaURL.Entity.UserProfileEntity;
 import com.kapil.chhotaURL.Service.IUserProfileService;
 import lombok.extern.slf4j.Slf4j;
-import org.modelmapper.ModelMapper;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Controller;
 
