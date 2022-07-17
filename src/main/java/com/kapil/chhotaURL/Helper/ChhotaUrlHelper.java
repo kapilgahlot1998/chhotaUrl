@@ -65,8 +65,7 @@ public class ChhotaUrlHelper {
     }
 
     public String createChhotaUrl(String hashCode) {
-        String hostName = InetAddress.getLoopbackAddress().getHostName();
-        String chhotaUrl = hostName + ":" + port + contextPath + "/url/" + hashCode;
+        String chhotaUrl = "https://chhota-url.herokuapp.com/chhotaUrl/url/" + hashCode;
         log.debug("Crated chhota url -> hashCode : {}, chhotaUrl : {}", hashCode, chhotaUrl);
         return chhotaUrl;
     }
